@@ -1,0 +1,153 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /snap/kompose/1/./kompose-linux-amd64 convert
+    kompose.version: 1.18.0 (06a2e56)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: router
+  name: router
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: router
+    spec:
+      containers:
+      - args:
+        - router
+        env:
+        - name: DRUID_LOG4J
+          valueFrom:
+            configMapKeyRef:
+              key: DRUID_LOG4J
+              name: router-environment
+        - name: DRUID_MAXDIRECTMEMORYSIZE
+          valueFrom:
+            configMapKeyRef:
+              key: DRUID_MAXDIRECTMEMORYSIZE
+              name: router-environment
+        - name: DRUID_MAXNEWSIZE
+          valueFrom:
+            configMapKeyRef:
+              key: DRUID_MAXNEWSIZE
+              name: router-environment
+        - name: DRUID_NEWSIZE
+          valueFrom:
+            configMapKeyRef:
+              key: DRUID_NEWSIZE
+              name: router-environment
+        - name: DRUID_XMS
+          valueFrom:
+            configMapKeyRef:
+              key: DRUID_XMS
+              name: router-environment
+        - name: DRUID_XMX
+          valueFrom:
+            configMapKeyRef:
+              key: DRUID_XMX
+              name: router-environment
+        - name: druid_coordinator_balancer_strategy
+          valueFrom:
+            configMapKeyRef:
+              key: druid_coordinator_balancer_strategy
+              name: router-environment
+        - name: druid_emitter_logging_logLevel
+          valueFrom:
+            configMapKeyRef:
+              key: druid_emitter_logging_logLevel
+              name: router-environment
+        - name: druid_extensions_loadList
+          valueFrom:
+            configMapKeyRef:
+              key: druid_extensions_loadList
+              name: router-environment
+        - name: druid_indexer_fork_property_druid_processing_buffer_sizeBytes
+          valueFrom:
+            configMapKeyRef:
+              key: druid_indexer_fork_property_druid_processing_buffer_sizeBytes
+              name: router-environment
+        - name: druid_indexer_logs_directory
+          valueFrom:
+            configMapKeyRef:
+              key: druid_indexer_logs_directory
+              name: router-environment
+        - name: druid_indexer_logs_type
+          valueFrom:
+            configMapKeyRef:
+              key: druid_indexer_logs_type
+              name: router-environment
+        - name: druid_indexer_runner_javaOptsArray
+          valueFrom:
+            configMapKeyRef:
+              key: druid_indexer_runner_javaOptsArray
+              name: router-environment
+        - name: druid_metadata_storage_connector_connectURI
+          valueFrom:
+            configMapKeyRef:
+              key: druid_metadata_storage_connector_connectURI
+              name: router-environment
+        - name: druid_metadata_storage_connector_password
+          valueFrom:
+            configMapKeyRef:
+              key: druid_metadata_storage_connector_password
+              name: router-environment
+        - name: druid_metadata_storage_connector_user
+          valueFrom:
+            configMapKeyRef:
+              key: druid_metadata_storage_connector_user
+              name: router-environment
+        - name: druid_metadata_storage_host
+          valueFrom:
+            configMapKeyRef:
+              key: druid_metadata_storage_host
+              name: router-environment
+        - name: druid_metadata_storage_type
+          valueFrom:
+            configMapKeyRef:
+              key: druid_metadata_storage_type
+              name: router-environment
+        - name: druid_processing_numMergeBuffers
+          valueFrom:
+            configMapKeyRef:
+              key: druid_processing_numMergeBuffers
+              name: router-environment
+        - name: druid_processing_numThreads
+          valueFrom:
+            configMapKeyRef:
+              key: druid_processing_numThreads
+              name: router-environment
+        - name: druid_storage_storageDirectory
+          valueFrom:
+            configMapKeyRef:
+              key: druid_storage_storageDirectory
+              name: router-environment
+        - name: druid_storage_type
+          valueFrom:
+            configMapKeyRef:
+              key: druid_storage_type
+              name: router-environment
+        - name: druid_zk_service_host
+          valueFrom:
+            configMapKeyRef:
+              key: druid_zk_service_host
+              name: router-environment
+        image: apache/druid:0.17.0
+        name: druid_router
+        ports:
+        - containerPort: 8888
+        resources: {}
+        volumeMounts:
+        - mountPath: /opt/druid/var
+          name: router-var
+      restartPolicy: Always
+      volumes:
+      - name: router-var
+        persistentVolumeClaim:
+          claimName: router-var
+status: {}

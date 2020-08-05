@@ -1,0 +1,158 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /snap/kompose/1/./kompose-linux-amd64 convert
+    kompose.version: 1.18.0 (06a2e56)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: historical
+  name: historical
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: historical
+    spec:
+      containers:
+      - args:
+        - historical
+        env:
+        - name: DRUID_LOG4J
+          valueFrom:
+            configMapKeyRef:
+              key: DRUID_LOG4J
+              name: historical-environment
+        - name: DRUID_MAXDIRECTMEMORYSIZE
+          valueFrom:
+            configMapKeyRef:
+              key: DRUID_MAXDIRECTMEMORYSIZE
+              name: historical-environment
+        - name: DRUID_MAXNEWSIZE
+          valueFrom:
+            configMapKeyRef:
+              key: DRUID_MAXNEWSIZE
+              name: historical-environment
+        - name: DRUID_NEWSIZE
+          valueFrom:
+            configMapKeyRef:
+              key: DRUID_NEWSIZE
+              name: historical-environment
+        - name: DRUID_XMS
+          valueFrom:
+            configMapKeyRef:
+              key: DRUID_XMS
+              name: historical-environment
+        - name: DRUID_XMX
+          valueFrom:
+            configMapKeyRef:
+              key: DRUID_XMX
+              name: historical-environment
+        - name: druid_coordinator_balancer_strategy
+          valueFrom:
+            configMapKeyRef:
+              key: druid_coordinator_balancer_strategy
+              name: historical-environment
+        - name: druid_emitter_logging_logLevel
+          valueFrom:
+            configMapKeyRef:
+              key: druid_emitter_logging_logLevel
+              name: historical-environment
+        - name: druid_extensions_loadList
+          valueFrom:
+            configMapKeyRef:
+              key: druid_extensions_loadList
+              name: historical-environment
+        - name: druid_indexer_fork_property_druid_processing_buffer_sizeBytes
+          valueFrom:
+            configMapKeyRef:
+              key: druid_indexer_fork_property_druid_processing_buffer_sizeBytes
+              name: historical-environment
+        - name: druid_indexer_logs_directory
+          valueFrom:
+            configMapKeyRef:
+              key: druid_indexer_logs_directory
+              name: historical-environment
+        - name: druid_indexer_logs_type
+          valueFrom:
+            configMapKeyRef:
+              key: druid_indexer_logs_type
+              name: historical-environment
+        - name: druid_indexer_runner_javaOptsArray
+          valueFrom:
+            configMapKeyRef:
+              key: druid_indexer_runner_javaOptsArray
+              name: historical-environment
+        - name: druid_metadata_storage_connector_connectURI
+          valueFrom:
+            configMapKeyRef:
+              key: druid_metadata_storage_connector_connectURI
+              name: historical-environment
+        - name: druid_metadata_storage_connector_password
+          valueFrom:
+            configMapKeyRef:
+              key: druid_metadata_storage_connector_password
+              name: historical-environment
+        - name: druid_metadata_storage_connector_user
+          valueFrom:
+            configMapKeyRef:
+              key: druid_metadata_storage_connector_user
+              name: historical-environment
+        - name: druid_metadata_storage_host
+          valueFrom:
+            configMapKeyRef:
+              key: druid_metadata_storage_host
+              name: historical-environment
+        - name: druid_metadata_storage_type
+          valueFrom:
+            configMapKeyRef:
+              key: druid_metadata_storage_type
+              name: historical-environment
+        - name: druid_processing_numMergeBuffers
+          valueFrom:
+            configMapKeyRef:
+              key: druid_processing_numMergeBuffers
+              name: historical-environment
+        - name: druid_processing_numThreads
+          valueFrom:
+            configMapKeyRef:
+              key: druid_processing_numThreads
+              name: historical-environment
+        - name: druid_storage_storageDirectory
+          valueFrom:
+            configMapKeyRef:
+              key: druid_storage_storageDirectory
+              name: historical-environment
+        - name: druid_storage_type
+          valueFrom:
+            configMapKeyRef:
+              key: druid_storage_type
+              name: historical-environment
+        - name: druid_zk_service_host
+          valueFrom:
+            configMapKeyRef:
+              key: druid_zk_service_host
+              name: historical-environment
+        image: apache/druid:0.17.0
+        name: druid_historical
+        ports:
+        - containerPort: 8083
+        resources: {}
+        volumeMounts:
+        - mountPath: /opt/data
+          name: historical-claim0
+        - mountPath: /opt/druid/var
+          name: historical-var
+      restartPolicy: Always
+      volumes:
+      - name: historical-claim0
+        persistentVolumeClaim:
+          claimName: historical-claim0
+      - name: historical-var
+        persistentVolumeClaim:
+          claimName: historical-var
+status: {}
