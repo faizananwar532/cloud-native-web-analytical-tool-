@@ -1,0 +1,214 @@
+.personal-details{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: medium;
+
+    padding-left: 8%;
+}
+.pd-input{
+    background-color: #ffffc3;
+    width: 65%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px gainsboro solid;
+}
+.pd-input:hover{
+    cursor: not-allowed;
+}
+
+.pd-account-details{
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pd-username,
+.pd-email
+{
+    width: 42%;    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.pd-username{
+    height: 61%;
+}
+.pd-email{
+    height: 17%;
+}
+
+.pd-name{
+    width: 100%;
+    height: 15%;
+    display: flex;;
+}
+.pd-name div{
+    width: 42%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pd-lastname{
+    padding-left: 6%;
+}
+
+.pd-license,
+.pd-acc-creation
+{
+    width: 12%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pd-unique{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2%;
+}
+.pd-image-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+}
+
+.image-container {
+    position: relative;
+    width: 50%;
+  }
+  
+  /* Make the image responsive */
+  .image-container img {
+    width: 50%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  /* Style the button and place it in the middle of the container/image */
+  .image-container .btn {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    width: 50%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    text-align: center;
+    font-size: x-small;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background: none;
+  }
+  
+  .image-container .btn:hover {
+    background:none;
+    color: black;
+    background-color: rgb(27, 25, 25,0.3);
+  }
+
+
+.editPass-wrapper{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.change-password-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.passmain{
+    display: flex;
+    flex-direction: row;
+}
+.passmain text{
+    font-size: small;
+    width: 18%;
+}
+
+  .oldpass{
+    width: 50%;
+    height: 17%;   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3px;
+  }
+  .oldpass input{
+      width: 32%;
+  }
+  
+  .pass-input{
+    background-color: #ffffc3;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px gainsboro solid;
+    font-size: x-small;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+  }
+  .pass-input:focus{
+      width: 45%;
+  }
+
+  .buttons{
+      display: flex;
+      justify-content: space-evenly;    
+  }
+
+  .buttons button{
+    font-size: small;
+    border-radius: 20px;
+    font-weight: lighter;
+    align-self: flex-end;
+    border: 2px solid #fff;
+    color: white;
+    background-color: teal;
+  }
+
+  .after{
+      display: flex;
+  }
+  .after button{
+      margin-right: 5%;
+  }
+  .edit:hover{
+    border: 2px solid teal;
+    color:teal;
+    background-color: white;
+  }
+  .save:hover{
+      background-color: green;
+      color: white;
+  }
+  .cancel:hover{
+    background-color:red;
+    color: white;
+  }
+
+  .edit:focus,
+  .save:focus,
+  .cancel:focus{
+        border-style: none;
+  }

@@ -1,0 +1,17 @@
+.app-Main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.app-nav{
+  height: 20%;
+}
+.app-content{
+  background-color: aqua;
+  height: 100%;
+  width: 100%;
+}
+.app-footer{
+  height: 20%;
+}

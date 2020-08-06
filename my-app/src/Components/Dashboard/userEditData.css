@@ -1,0 +1,199 @@
+.edit-main-wrapper{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btns-for-edit{
+    width: 20%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: teal 1px solid;
+    border-radius: 5%;
+}
+.view-for-edit{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns-for-edit button{
+    width: 100%;
+    height: 100%;
+    border-radius: 25%;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid teal;
+}
+
+.btns-for-edit-link{
+    width: 60%;
+    height: 15%;
+}
+.btns-for-edit-link:hover{
+    text-decoration: none;
+}
+
+.btns-for-edit button:hover{
+    color: teal;
+    border-top: 2px solid teal;
+    outline-style: none;
+}
+.btns-for-edit button:focus{
+    outline-style: none;
+    color: teal;
+    border-top: 2px solid teal;
+}
+
+.inner-view{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.field-input{
+    width: 60%;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;    
+}
+.field-input:focus{
+    width: 95%;
+    border: 1px teal solid;   
+}
+.save-button{
+    border-radius: 20px;
+    height: 10%;
+    width: 30%;
+    margin-right: 5%;
+    font-size: 1em;
+    font-weight: lighter;
+    align-self: flex-end;
+    background-color: teal;
+    color: white;
+    border: 2px solid white;
+}
+
+
+.save-button:hover{
+    background-color: white;
+    color: teal;
+    border: 2px solid teal;
+    outline-style: none;
+}
+
+.save-buttonDis{
+    border-radius: 20px;
+    height: 10%;
+    width: 30%;
+    margin-right: 5%;
+    font-size: 1em;
+    font-weight: lighter;
+    align-self: flex-end;
+    color: teal;
+    background-color: rgb(232, 233, 227);
+    cursor: not-allowed;
+    border: 2px solid white;
+}
+
+.save-buttonDis:hover{
+    color: teal;
+    background-color: rgb(232, 233, 227);
+    border: 2px solid white;
+}
+
+.edit-image-container{
+    width: 80%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+}
+.edit-pic{
+    width: 40%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.field-input-error{
+    width: 95%;
+    border: 2px solid red;
+}
+
+.field-input-success{
+    width: 95%;
+    border: 2px solid green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.edit-btn{
+    position: absolute;
+    top: 51.75%;
+    left: 81.65%;
+    width: 11%;
+    height: 24.75%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    text-align: center;
+    font-size: x-small;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background: none;
+}
+.edit-btn{
+    background:none;
+    color: black;
+    background-color: rgb(27, 25, 25,0.3);
+}
+.edit-btn:focus{
+    outline-style: none;
+}
+
+
+.edit-headings{
+    width: 100%;
+    height: 2%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.edit-panels{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.edit-headings text{
+    font-size: medium;
+}
+*/

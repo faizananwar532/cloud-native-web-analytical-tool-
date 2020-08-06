@@ -1,0 +1,12 @@
+export const SUCCESS_SIGNUP = 'SUCCESS_SIGNUP'
+export const SUCCESS_SIGNIN = 'SUCCESS_SIGNIN'
+export const FAIL_SIGNUP = 'FAIL_SIGNUP'
+export const FAIL_SIGNIN = 'FAIL_SIGNIN'
+export const SET_ERROR = 'SET_ERROR'
+export const CLEAR_ERROR = 'CLEAR_ERROR'
+export const LOG_OUT = 'LOG_OUT'
+export const SET_USER = 'SET_USER'
+export const AUTH_ERROR = 'AUTH_ERROR'
+
+export const SUCCESS_UPLOAD = 'SUCCESS_UPLOAD'
+export const FAIL_UPLOAD = 'FAIL_UPLOAD'

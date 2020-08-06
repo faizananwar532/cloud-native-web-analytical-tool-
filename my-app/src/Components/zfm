@@ -1,0 +1,139 @@
+/*import {useState,useEffect} from 'react'
+
+const useForm = (callback, onSubmitValidation) => {
+    const [values , setValues] = useState({
+                                            firstName: "" , 
+                                            lastName: "",
+                                            email: "", 
+                                            password: "", 
+                                            confirmPassword: "",
+                                        });
+    const [checks, setChecks] = useState({
+        check_agreement: false
+    });
+
+    const [error , setError] = useState({});
+    const [success, setSuccess] = useState({});
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    
+    const handleChange = event => {
+        const {name, value} = event.target;
+        console.log(event.target.value)
+        let errors = {}
+        let success = {}
+        setValues(
+            {                
+                ...values,
+                [name] : value
+            }           
+        )
+        switch(name) {
+            case "firstName":
+                if(value.length > 0){          
+                    if(value.length < 3){
+                        errors.firstName = "required at least 3 words"
+                    }
+                    else {
+                        success.firstName = "valid"
+                    }
+                }
+                setError(errors);
+                setSuccess(success);
+                break;
+
+            case "lastName":
+                if(value.length > 0){          
+                    if(value.length < 3){
+                        errors.lastName = "required at least 3 words"
+                    }
+                    else {
+                        success.lastName = "valid"
+                    }
+                }
+                setError(errors);
+                setSuccess(success);
+                break;
+
+            case "email":
+                if(!/\S+@\S+\.\S+/.test(value) && value.length > 0){
+                    errors.email ="email is invalid"
+                }
+                else if(value.length > 0) {
+                    success.email = "valid"
+                }
+                setError(errors);
+                setSuccess(success);
+                break;
+
+            case "password":
+                if(value.length < 10){
+                    errors.password = "minimum 10 characters required"
+                }
+                else if(value !== values.confirmPassword && values.confirmPassword.length > 0){
+                    errors.password = "mismatch"
+                } 
+                else {
+                    success.password = "valid"
+                }
+                setError(errors);
+                setSuccess(success);
+                break;
+
+            case "confirmPassword":
+                if(values.password.length < 1){
+                    errors.password = "password required before confirm it"
+                }
+                else if(value !== values.password){
+                    errors.confirmPassword = "mismatch"
+                }
+                else {
+                    success.confirmPassword = "match"
+                }
+                setError(errors);
+                setSuccess(success);
+                break;
+                
+            default:
+                setError(errors);
+                setSuccess(success);
+        }
+        //console.log(values)
+    }
+
+    const handleCheck = event =>{
+        setChecks({
+            [event.target.name]: event.target.checked          
+        })
+        console.log(checks.check_agreement)
+
+    }
+    const handleSubmit = event => {
+        event.preventDefault();
+        //handle Error
+        
+        setError(onSubmitValidation(values, checks))
+        setIsSubmitting(true)
+        
+    }
+
+    useEffect(() => {
+        console.log(Object.keys(error).length)
+        console.log(isSubmitting);
+        if (Object.keys(error).length === 0 && isSubmitting){
+            callback();
+        }       
+    }, [error])
+
+    return {
+        handleSubmit,
+        handleChange,
+        handleCheck,
+        values,
+        checks,
+        error,
+        success
+    }
+};
+
+export default useForm;

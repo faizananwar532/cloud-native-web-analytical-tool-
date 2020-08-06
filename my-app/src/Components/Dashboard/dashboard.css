@@ -1,0 +1,242 @@
+.main-wrapper{
+    height: 100%;
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    position: fixed;
+}
+
+.slider{
+    width: 15%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+}
+
+.dashboard{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    background-color: whitesmoke;
+}
+/*------------------------------------------SLIDER----------------------------------*/
+.slider-header{
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-right: 0.5px solid darkgray;
+}
+.Round-Name-button{
+    margin-right: 8%;
+    height: 30%;
+    width: 16%;
+    border-radius: 100%;
+    font-size: large;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+    background-color: teal;
+    color: white;
+}
+.slider-menu{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    padding-top: 15%;
+
+    border-right: 0.5px solid darkgray;
+}
+
+.head{
+    padding-left: 10%;
+    color: rgb(136, 132, 132);
+}
+.slider-menu div ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.slider-menu div ul li{
+    height: 100%;
+}
+.dash-link-button{
+    width: 50%;
+}
+.dashboard-links:hover{
+    text-decoration: none;
+}
+
+.core{
+    height: 15%;
+}
+.core head{
+    height: 30%;
+}
+.core ul{
+    height: 70%;
+}
+
+.instances{
+    height: 15%;
+}
+.instances head{
+    height: 100%;
+}
+.instances ul{
+    height: 70%;
+}
+
+.slider-menu ul li button{
+    width: 100%;
+    height: 85%;
+    background-color: white;
+    color: black;
+    border-radius: 10%;
+    border: none;
+    border-bottom: 1px solid oldlace;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.slider-menu ul li button:hover{
+    color: teal;
+    border-bottom: 2px solid teal;
+}
+.slider-menu ul li button:focus{
+    color: teal;
+    border-bottom: 2px solid teal;
+    outline-style: none;
+}
+
+
+.slider-menu-icon{
+    
+}
+
+.logout{
+    width: 100%;
+    flex-basis: 17%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20%;
+    
+}
+.logout-button{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    border: none;
+    border-bottom: 1px solid oldlace;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logout-button text{
+    padding-left: 10%;
+}
+.logout-button:hover{
+    color: crimson;
+    border-bottom: 2px solid crimson;
+}
+
+/*--------------------------------------------------Dashboard-Header-------------------------------------*/
+.dashboard-header{
+    background-color: teal;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.upper-header{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: teal;
+}
+
+.dashboard-upperHeader-text{
+    background-color: teal;
+    height: 100%;
+    width: 15%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.dashboard-upperHeader-icon{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.mid-header{
+    width: 100%;
+    height: 15%;
+}
+.lower-header{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: whitesmoke;
+    font-size: xxx-large;
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.db-background{
+    width: 100%;
+    height: 75%;
+    background-color: rgb(232, 236, 240);
+}
+/*--------------------------------------------------Main-------------------------------------------------*/
+.dashboard-main{
+    width: 80%;
+    height: 75%;
+    display: flex;
+
+    padding-left: 2%;
+    padding-right: 2%;
+
+    margin-left: 10%;
+    position: absolute;
+    top: 20%;
+
+    background-color: white;
+    border: whitesmoke 2px solid;
+
+    border-radius: 2%;
+}
+.subjects{
+    height: 100%;
+    width: 100%;
+    margin-bottom: 50%;
+}

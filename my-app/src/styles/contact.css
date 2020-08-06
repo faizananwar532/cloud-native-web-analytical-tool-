@@ -1,0 +1,82 @@
+.btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 10px 36px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.success-contact-field {
+    border-color: #4CAF50;
+    color: green;
+}
+
+.success-contact-field:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.row-class{
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.row-class h1{
+    font-size: 54px; text-align: center;
+}
+.row-class h3{
+    text-align: center;
+}
+
+.row-class img{
+    padding: 10%; margin-left: 20%; width: 64%;
+}
+
+.headImage{
+    padding: 5%; width: 64%;
+}
+
+.contact-form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form-panel{
+    width: 50%;
+}
+.send-message,
+.form-group{
+    padding: 3%;
+}
+
+.form-group input{
+    border-color: #4CAF50;
+}
+
+.send-message-wrapper{
+    padding: 15%;
+}
+
+.send-message-lower-wrapper{
+    padding: 10%; padding-top: 0px;
+}
+
+.send-message-lower-wrapper h1{
+    text-align: center; font-size: 54px;  padding: 5%; padding-top: 0px;
+}
+
+.send-message-support{
+    padding-left: 5%;
+}
+
+.send-message-support div{
+    padding-left: 10%; padding-top: 2%;
+}
+
+.send-message-support-image image{
+    width: 100%; padding-right: 10%;
+}

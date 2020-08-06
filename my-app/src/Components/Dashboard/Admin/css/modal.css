@@ -1,0 +1,45 @@
+.modalHeader{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button{
+    border: none;
+}
+.modalHeader .textHeader{
+    align-self: flex-start;
+}
+
+.modalBody{
+    padding: 10%;
+}
+.modalBody div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modalBodyHeading{
+    justify-self: flex-start;
+}
+
+.modalDeactiveText{
+    color: red;
+}
+.modalActiveText{
+    color: green
+}
+
+.modalDeactiveButton{
+    background-color: red;
+    color: white;
+}
+.modalActiveButton{
+    background-color: green;
+    color: white;
+}

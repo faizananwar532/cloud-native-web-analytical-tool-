@@ -1,0 +1,105 @@
+.form-outer-wrapper{
+    width: 525px;
+    display: flex;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 10px 50px#555;
+    background-color: #ffffff;
+}.form-wrapper-signin {
+    width: 525px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signin-form-inner-wrapper{
+    display: flex;
+    border-radius: 30px;
+    flex-direction: column;
+    padding: 20px 40px;
+    justify-content: center;
+}
+.form-wrapper-signin button{
+    width: 50%;
+    height: 6vh;
+    border: none;
+}
+.form-wrapper-signin button:focus
+{
+    background-color: teal;
+    color: white;
+    outline: none;
+}
+.form-user-signin{
+    border-top-left-radius: 65% ;
+}
+.form-user-signin:hover,
+.form-user-signin:focus{
+    background-color: teal;
+    color: white;
+    border-right: white solid 0.5px;
+
+}
+.form-admin-signin{
+    border-top-right-radius: 65% ;
+}
+.form-admin-signin:hover,
+.form-admin-signin:focus{    
+    background-color: teal;
+    color: white;
+    border-left: white solid 0.5px;
+}
+
+
+
+.fa-eye{
+    position: absolute;
+    padding-left: 29%;
+    margin-top: 0.7%;
+    cursor: pointer;
+}
+
+.login{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login button{
+    width: 35%;
+    height: 45px;    
+    border-radius: 20px;
+    margin-top: 1em;
+    padding: 8px 0px;
+    font-size: 1em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-bottom: 0.25em;
+    padding: 5px;
+    align-self: flex-end;
+}
+
+.buttonDis{
+    border: 2px solid #fff;
+    color: teal;
+    background-color: rgb(232, 233, 227);
+    cursor: not-allowed;
+    
+}
+.buttonDis:hover{
+    border: 2px solid #fff;
+    color: teal;
+    background-color: rgb(232, 233, 227);
+}
+
+.buttonEn{
+    background-color: #519e8a;
+    color: #fff;
+    border: 2px solid #fff;
+}
+.buttonEn:hover{
+    color: #519e8a;
+    background-color: #fff;
+    border: 2px solid #519e8a;
+}
